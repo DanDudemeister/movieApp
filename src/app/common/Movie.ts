@@ -1,13 +1,13 @@
 export class Movie {
 
   private _id: number;
-  private _name: string;
+  private _title: string;
   private _director: string;
   private _year: number;
 
-  constructor(id: number, name: string, director: string, year: number) {
+  constructor(id: number, title: string, director: string, year: number) {
     this._id = id;
-    this._name = name;
+    this._title = title;
     this._director = director;
     this._year = year;
   }
@@ -16,8 +16,8 @@ export class Movie {
     return this._id;
   }
 
-  get name(): string {
-    return this._name;
+  get title(): string {
+    return this._title;
   }
 
   get director(): string {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MovieService} from '../common/movie.service';
 
 @Component({
   selector: 'app-overview',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverviewComponent implements OnInit {
 
-  constructor() { }
+  public movieService: MovieService;
+  public selectedMovieId: number;
+
+  constructor(movieService: MovieService) {
+    this.movieService = movieService;
+    this.selectedMovieId = null;
+  }
 
   ngOnInit() {
   }
 
+  public selectMovie(id: number): void {
+    this.selectedMovieId = id;
+  }
 }
