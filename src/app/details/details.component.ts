@@ -3,8 +3,7 @@ import { Movie } from '../common/Movie';
 
 @Component({
   selector: 'app-details',
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css']
+  templateUrl: './details.component.html'
 })
 export class DetailsComponent implements OnInit {
 
