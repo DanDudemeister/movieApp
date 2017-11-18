@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Movie} from './Movie';
+import { Movie } from './Movie';
 
 @Injectable()
 export class MovieService {
