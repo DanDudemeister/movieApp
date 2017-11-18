@@ -1,19 +1,17 @@
 export class Movie {
 
-  private _id: number;
   private _title: string;
   private _director: string;
   private _year: number;
+  private _genres: string[];
+  private _stars: string[];
 
-  constructor(id: number, title: string, director: string, year: number) {
-    this._id = id;
+  constructor(title: string, director: string, year: number, genres: string[], stars: string[]) {
     this._title = title;
     this._director = director;
     this._year = year;
-  }
-
-  get id(): number {
-    return this._id;
+    this._genres = genres;
+    this._stars = stars;
   }
 
   get title(): string {
@@ -26,5 +24,13 @@ export class Movie {
 
   get year(): number {
     return this._year;
+  }
+
+  get genres(): string[] {
+    return this._genres;
+  }
+
+  get stars(): string[] {
+    return this._stars;
   }
 }
